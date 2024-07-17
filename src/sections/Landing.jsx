@@ -8,7 +8,9 @@ const LandingSection = () => {
           <Heading>My personal developer portfolio</Heading>
           <Content className="landing-content">
             <h1>
-              <span>Passionate</span> <span>Code</span> <span>Artisan</span>
+              <span>Passionate</span>
+                <span>Code</span>
+              <span>Artisan</span>
             </h1>
           </Content>
           <p>CodeSage: Crafting the Future with Code and Curiosity</p>
