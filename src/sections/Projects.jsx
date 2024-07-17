@@ -18,14 +18,14 @@ const ProjectsSection = () => {
 export default ProjectsSection;
 
 const ProjectSection = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: 3rem;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: 3rem;
+  justify-content: center;
 
-    p{
-        font-size: 36px;
-        font-weight: 500;
-        letter-spacing: -0.48px;
-    }
-`
+  p {
+    font-size: 36px;
+    font-weight: 500;
+    letter-spacing: -0.48px;
+  }
+`;
