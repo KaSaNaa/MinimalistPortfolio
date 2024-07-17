@@ -1,10 +1,8 @@
 import styled from "styled-components";
-import Navbar from "./Navbar";
 
-const Landing = () => {
+const LandingSection = () => {
   return (
     <>
-      <Navbar />
       <section id="landing">
         <Container className="container">
           <Heading>My personal developer portfolio</Heading>
@@ -20,7 +18,7 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default LandingSection;
 
 const Heading = styled.div`
   padding-left: 7%;
@@ -75,8 +73,9 @@ const Container = styled.div`
     margin-top: 15px;
 
     @media (max-width: 768px) {
-      margin-left: 15px;
+      margin: 20px;
       font-size: 20px;
+      text-align: center;
     }
   }
 `;
