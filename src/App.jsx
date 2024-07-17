@@ -1,14 +1,14 @@
-import Landing from "./sections/Landing"
-import "./App.css"
+import LandingSection from "./sections/Landing";
+import "./App.css";
+import Navbar from "./sections/Navbar";
 
 function App() {
-
-
   return (
     <>
-      <Landing />
+      <Navbar />
+      <LandingSection />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
