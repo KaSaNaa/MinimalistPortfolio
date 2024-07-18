@@ -9,9 +9,15 @@ const LandingSection = () => {
           <Heading>My personal developer portfolio</Heading>
           <Content className="landing-content">
             <h1>
-              <Link to="#gallery"><span>Passionate</span></Link>
-              <Link to="#projects"><span>Code</span></Link>
-              <Link to="#socials"><span>Artisan</span></Link>
+              <Link to="#gallery">
+                <span className="hover-circle">Passionate</span>
+              </Link>
+              <Link to="#projects">
+                <span className="hover-circle">Code</span>
+              </Link>
+              <Link to="#socials">
+                <span className="hover-circle">Artisan</span>
+              </Link>
             </h1>
           </Content>
           <p>CodeSage: Crafting the Future with Code and Curiosity</p>
@@ -88,6 +94,42 @@ const Content = styled.div`
   display: flex;
   height: fit-content;
   color: transparent;
+
+  .hover-circle {
+    position: relative;
+    cursor: pointer;
+    display: inline-block; /* Ensure the span behaves correctly for positioning */
+
+    @media (max-width: 480px) {
+      margin: 10px; // Add some space around the text on very small screens
+    }
+
+    @media (max-width: 768px) {
+      margin: 20px; // Add some space around the text on small
+    }
+
+    @media (max-width: 1024px) {
+      margin: 20px; // Add some space around the text on medium screens
+    }
+  }
+
+  .hover-circle::before {
+    content: "";
+    position: absolute;
+    bottom: -20px; /* Position the circle below the text */
+    left: 50%;
+    width: 20px; /* Size of the circle */
+    height: 20px; /* Size of the circle */
+    background-color: black;
+    border-radius: 50%;
+    transform: translateX(-50%) scale(0); /* Center the circle horizontally */
+    transition: transform 0.3s ease;
+    z-index: -1;
+  }
+
+  .hover-circle:hover::before {
+    transform: translateX(-50%) scale(1); /* Show the circle on hover */
+  }
 
   h1 {
     display: flex;
