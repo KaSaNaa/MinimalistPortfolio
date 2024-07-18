@@ -1,3 +1,4 @@
+import { Link } from "react-scroll";
 import styled from "styled-components";
 
 const LandingSection = () => {
@@ -8,9 +9,9 @@ const LandingSection = () => {
           <Heading>My personal developer portfolio</Heading>
           <Content className="landing-content">
             <h1>
-              <span>Passionate</span>
-                <span>Code</span>
-              <span>Artisan</span>
+              <Link to="#gallery"><span>Passionate</span></Link>
+              <Link to="#projects"><span>Code</span></Link>
+              <Link to="#socials"><span>Artisan</span></Link>
             </h1>
           </Content>
           <p>CodeSage: Crafting the Future with Code and Curiosity</p>

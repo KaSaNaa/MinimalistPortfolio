@@ -29,7 +29,7 @@ export default ProjectsSection;
 
 const Title = styled.div`
   width: 100%;
-  padding-left: 3rem;
+  padding-left: 5rem;
   align-self: start;
   font-size: 36px;
   font-weight: 500;
