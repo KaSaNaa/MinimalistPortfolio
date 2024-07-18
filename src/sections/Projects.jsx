@@ -34,6 +34,20 @@ const Title = styled.div`
   font-size: 36px;
   font-weight: 500;
   letter-spacing: -0.48px;
+
+  @media (max-width: 768px) {
+    padding-left: 3rem;
+    font-size: 20px;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 1rem;
+    font-size: 18px;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 22px;
+  }
 `;
 
 const ProjectSection = styled.div`
@@ -46,5 +60,7 @@ const ProjectSection = styled.div`
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr; // On smaller screens, switch to 1 column
+    padding: 10px; // Reduce padding on smaller screens
+    gap: 0;
   }
 `;
