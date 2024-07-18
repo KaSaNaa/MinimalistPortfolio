@@ -1,4 +1,3 @@
-import { Link } from "react-scroll";
 import styled from "styled-components";
 
 const LandingSection = () => {
@@ -9,15 +8,16 @@ const LandingSection = () => {
           <Heading>My personal developer portfolio</Heading>
           <Content className="landing-content">
             <h1>
-              <Link to="#gallery">
-                <span className="hover-circle">Passionate</span>
-              </Link>
-              <Link to="#projects">
+              <WordArt>
+                <span className="hover-circle">Passionate
+                </span>
+              </WordArt>
+              <WordArt>
                 <span className="hover-circle">Code</span>
-              </Link>
-              <Link to="#socials">
+              </WordArt>
+              <WordArt>
                 <span className="hover-circle">Artisan</span>
-              </Link>
+              </WordArt>
             </h1>
           </Content>
           <p>CodeSage: Crafting the Future with Code and Curiosity</p>
@@ -28,6 +28,8 @@ const LandingSection = () => {
 };
 
 export default LandingSection;
+
+const WordArt = styled.span``
 
 const Heading = styled.div`
   padding-left: 7%;
@@ -83,8 +85,10 @@ const Container = styled.div`
 
     @media (max-width: 768px) {
       margin: 20px;
-      font-size: 20px;
+      font-size: 18px;
+      letter-spacing: -0.6px;
       text-align: center;
+      padding: 10px;
     }
   }
 `;
