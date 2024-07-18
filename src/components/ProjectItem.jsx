@@ -35,7 +35,7 @@ const ProjectItem = ({ projectLink, projectName, topics, imageURL }) => {
         <span>{topics}</span>
       </Details>
       <Image>
-        <img
+        <Imgframe
           src={imageURL}
           alt="project"
           width={150}
@@ -64,6 +64,12 @@ const Card = styled.div`
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.6s ease-in-out;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 140px;
+    margin-bottom: 5px;
+  }
 `;
 
 const ProjectLink = styled.h3`
@@ -72,6 +78,11 @@ const ProjectLink = styled.h3`
   letter-spacing: -0.5px;
   color: #000; /* Adjust color as needed */
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    font-size: 70%;
+    
+  }
 `;
 
 const Details = styled.div`
@@ -81,16 +92,28 @@ const Details = styled.div`
   justify-content: center;
   width: 50%;
 
+  @media (max-width: 768px) {
+    margin-left: 2rem;
+  }
+
   h1 {
     font-weight: 500;
     font-size: 25px;
     letter-spacing: -0.96px;
+    
+    @media (max-width: 768px) {
+      font-size: 100%;
+    }
   }
   span {
     color: #999;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: -0.48px;
+
+    @media (max-width: 768px) {
+      font-size: 70%;
+    }
   }
 `;
 const Image = styled.div`
@@ -102,3 +125,10 @@ const Image = styled.div`
   justify-content: end;
   margin-right: 3rem;
 `;
+
+const Imgframe = styled.img`
+  @media (max-width: 768px) {
+    width: 100px;
+    height: 100px;
+  }
+`
