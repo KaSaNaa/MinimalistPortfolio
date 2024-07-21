@@ -1,6 +1,8 @@
 import styled from "styled-components";
+import scrollToSection from "../scripts/scroll2Sections";
 
 const LandingSection = () => {
+
   return (
     <>
       <section id="landing">
@@ -8,15 +10,14 @@ const LandingSection = () => {
           <Heading>My personal developer portfolio</Heading>
           <Content className="landing-content">
             <h1>
-              <WordArt>
-                <span className="hover-circle">Passionate
-                </span>
+              <WordArt className="passion">
+                <span className="hover-circle" onClick={() => scrollToSection('gallery')}>Passionate</span>
               </WordArt>
-              <WordArt>
-                <span className="hover-circle">Code</span>
+              <WordArt className="code">
+                <span className="hover-circle" onClick={() => scrollToSection('projectsSection')}>Code</span>
               </WordArt>
-              <WordArt>
-                <span className="hover-circle">Artisan</span>
+              <WordArt className="artisan">
+                <span className="hover-circle" onClick={() => scrollToSection('footerSection')}>Artisan</span>
               </WordArt>
             </h1>
           </Content>
@@ -29,7 +30,7 @@ const LandingSection = () => {
 
 export default LandingSection;
 
-const WordArt = styled.span``
+const WordArt = styled.span``;
 
 const Heading = styled.div`
   padding-left: 7%;
@@ -120,15 +121,25 @@ const Content = styled.div`
   .hover-circle::before {
     content: "";
     position: absolute;
-    bottom: -20px; /* Position the circle below the text */
+    bottom: -20px;
     left: 50%;
-    width: 20px; /* Size of the circle */
-    height: 20px; /* Size of the circle */
+    width: 20px;
+    height: 20px;
     background-color: black;
     border-radius: 50%;
-    transform: translateX(-50%) scale(0); /* Center the circle horizontally */
+    transform: translateX(-50%) scale(0);
     transition: transform 0.3s ease;
     z-index: -1;
+    animation: hoverCircleAnimation 2s infinite alternate ease-in-out;
+  }
+
+  @keyframes hoverCircleAnimation {
+    0% {
+      transform: translateX(-50%) scale(0);
+    }
+    100% {
+      transform: translateX(-50%) scale(1);
+    }
   }
 
   .hover-circle:hover::before {
@@ -157,9 +168,9 @@ const Content = styled.div`
   }
 
   span {
-    -webkit-text-stroke-width: 1px; /* Width of the outline */
-    -webkit-text-stroke-color: black; /* Color of the outline */
-    color: transparent; /* Makes the text fill transparent */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    color: transparent;
     font-family: THICCCBOI;
     font-size: 100px;
     font-style: normal;
@@ -167,23 +178,20 @@ const Content = styled.div`
     line-height: normal;
     letter-spacing: -2px;
     transition: background-color 0.5s ease, color 0.5s ease,
-      letter-spacing 0.5s ease; /* Include letter-spacing in the transition */
-    &:hover {
+      letter-spacing 0.5s ease;
+    animation: textEffectAnimation 2s infinite alternate ease-in-out;
+  }
+
+  @keyframes textEffectAnimation {
+    0% {
+      color: transparent;
+      letter-spacing: -2px;
+      -webkit-text-stroke-color: black;
+    }
+    100% {
       color: #000;
       letter-spacing: 3px;
       -webkit-text-stroke-color: transparent;
-    }
-
-    @media (max-width: 1024px) {
-      font-size: 90px;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 80px;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 55px;
     }
   }
 `;
