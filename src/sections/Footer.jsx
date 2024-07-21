@@ -10,8 +10,8 @@ import {
   FaReddit,
   FaLink,
 } from "react-icons/fa";
-import { FaGoogle } from "react-icons/fa6";
 import Socials from "../data/socials.json";
+import { IoMail } from "react-icons/io5";
 
 const Footer = () => {
   const size = 30;
@@ -34,7 +34,7 @@ const Footer = () => {
       case "Reddit":
         return <FaReddit size={size} />;
       case "Google":
-        return <FaGoogle size={size} />;
+        return <IoMail size={size} />;
       default:
         return <FaLink size={size} />; // Default case if no icon matches
     }
@@ -45,18 +45,18 @@ const Footer = () => {
       <Title>
         <b>Find me on</b>
       </Title>
-          <SocialLinks>
-            {Socials.map((social, index) => (
-              <a
-                key={index}
-                href={social.url}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {getSocialIcon(social.name) }
-              </a>
-            ))}
-          </SocialLinks>
+      <SocialLinks>
+        {Socials.map((social, index) => (
+          <a
+            key={index}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {getSocialIcon(social.name)}
+          </a>
+        ))}
+      </SocialLinks>
     </StyledFooter>
   );
 };
@@ -85,10 +85,14 @@ const SocialLinks = styled.div`
     transition: color 0.3s ease;
     padding: 1rem;
     color: black;
-    width: 10px;
 
     &:hover {
       color: #007bff; // Blue color
+    }
+
+    @media (max-width: 480px) {
+      scale: 0.6;
+      padding: 0;
     }
   }
 `;
