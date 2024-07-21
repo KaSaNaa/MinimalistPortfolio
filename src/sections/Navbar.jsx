@@ -9,7 +9,9 @@ const Navbar = () => {
         <NamePart>Pasindu.</NamePart>
       </Logo>
       <NavItems>
-        <NavItem href="/cv">Check out my CV</NavItem>
+        <a href="https://github.com/KaSaNaa/KaSaNaa/blob/main/files/CV.pdf"
+        rel="noopener noreferrer" target="_blank"
+        ><NavItem >Check out my CV</NavItem></a>
       </NavItems>
     </Nav>
   );
