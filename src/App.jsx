@@ -8,9 +8,15 @@ function App() {
   return (
     <>
       <Navbar />
-      <LandingSection />
-      <ProjectsSection />
-      <Footer />
+      <section id="landingSection">
+        <LandingSection />
+      </section>
+      <section id="projectsSection">
+        <ProjectsSection />
+      </section>
+      <section id="footerSection">
+        <Footer />
+      </section>
     </>
   );
 }
