@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ProjectItem from "../components/ProjectItem";
-import projectData from "../assets/data.json";
+import projectData from "../data/projects.json";
 
 const ProjectsSection = () => {
   return (
