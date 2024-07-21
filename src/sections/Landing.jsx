@@ -2,7 +2,6 @@ import styled from "styled-components";
 import scrollToSection from "../scripts/scroll2Sections";
 
 const LandingSection = () => {
-
   return (
     <>
       <section id="landing">
@@ -11,13 +10,28 @@ const LandingSection = () => {
           <Content className="landing-content">
             <h1>
               <WordArt className="passion">
-                <span className="hover-circle" onClick={() => scrollToSection('gallery')}>Passionate</span>
+                <span
+                  className="hover-circle"
+                  onClick={() => scrollToSection("gallery")}
+                >
+                  Passionate
+                </span>
               </WordArt>
               <WordArt className="code">
-                <span className="hover-circle" onClick={() => scrollToSection('projectsSection')}>Code</span>
+                <span
+                  className="hover-circle"
+                  onClick={() => scrollToSection("projectsSection")}
+                >
+                  Code
+                </span>
               </WordArt>
               <WordArt className="artisan">
-                <span className="hover-circle" onClick={() => scrollToSection('footerSection')}>Artisan</span>
+                <span
+                  className="hover-circle"
+                  onClick={() => scrollToSection("footerSection")}
+                >
+                  Artisan
+                </span>
               </WordArt>
             </h1>
           </Content>
@@ -180,6 +194,18 @@ const Content = styled.div`
     transition: background-color 0.5s ease, color 0.5s ease,
       letter-spacing 0.5s ease;
     animation: textEffectAnimation 2s infinite alternate ease-in-out;
+
+    @media (max-width: 1024px) {
+      font-size: 80px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 70px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 60px;
+    }
   }
 
   @keyframes textEffectAnimation {
